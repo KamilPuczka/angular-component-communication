@@ -1,0 +1,22 @@
+{
+  "npmScope": "angular-communication",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "core-app": {
+      "tags": []
+    },
+    "core-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["core-app"]
+    }
+  }
+}
