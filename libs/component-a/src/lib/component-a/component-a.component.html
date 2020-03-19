@@ -1,0 +1,10 @@
+<div class="component-container">
+  <p>Component A!</p>
+  <div>
+    <button (click)="notifyB()">Send notification to B</button>
+    <button (click)="askForDate()">Ask for date</button>
+  </div>
+  <ul>
+    <li *ngFor="let message of messages">{{message |json}}</li>
+  </ul>
+</div>

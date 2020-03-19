@@ -123,6 +123,138 @@
           }
         }
       }
+    },
+    "message-bus": {
+      "projectType": "library",
+      "root": "libs/message-bus",
+      "sourceRoot": "libs/message-bus/src",
+      "prefix": "angular-communication",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/message-bus/tsconfig.lib.json",
+            "project": "libs/message-bus/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/message-bus/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/message-bus/tsconfig.lib.json",
+              "libs/message-bus/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/message-bus/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/message-bus/jest.config.js",
+            "tsConfig": "libs/message-bus/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/message-bus/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "component-a": {
+      "projectType": "library",
+      "root": "libs/component-a",
+      "sourceRoot": "libs/component-a/src",
+      "prefix": "angular-communication",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/component-a/tsconfig.lib.json",
+            "project": "libs/component-a/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/component-a/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/component-a/tsconfig.lib.json",
+              "libs/component-a/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/component-a/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/component-a/jest.config.js",
+            "tsConfig": "libs/component-a/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/component-a/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "component-b": {
+      "projectType": "library",
+      "root": "libs/component-b",
+      "sourceRoot": "libs/component-b/src",
+      "prefix": "angular-communication",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/component-b/tsconfig.lib.json",
+            "project": "libs/component-b/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/component-b/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/component-b/tsconfig.lib.json",
+              "libs/component-b/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/component-b/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/component-b/jest.config.js",
+            "tsConfig": "libs/component-b/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/component-b/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

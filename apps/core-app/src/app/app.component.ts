@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MessageBus } from '@angular-communication/message-bus';
+import { NOTIFICATIONS } from '../../../../libs/messages';
 
 @Component({
   selector: 'angular-communication-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'core-app';
+  constructor(private readonly messageBus: MessageBus) {
+    messageBus.initializeWindow(window);
+  }
+
+  clear(): void {
+    this.messageBus.notify(NOTIFICATIONS.clear);
+  }
 }

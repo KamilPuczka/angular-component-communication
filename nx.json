@@ -17,6 +17,15 @@
     "core-app-e2e": {
       "tags": [],
       "implicitDependencies": ["core-app"]
+    },
+    "message-bus": {
+      "tags": []
+    },
+    "component-a": {
+      "tags": []
+    },
+    "component-b": {
+      "tags": []
     }
   }
 }

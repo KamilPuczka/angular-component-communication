@@ -1,0 +1,9 @@
+<p>Component B!</p>
+<div>
+  <button (click)="notifyA()">Send notification to A</button>
+  <button (click)="sum2Numbers()">Sum 2 numbers</button>
+
+</div>
+<ul>
+  <li *ngFor="let message of messages">{{message |json}}</li>
+</ul>

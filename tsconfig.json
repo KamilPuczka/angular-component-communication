@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-communication/message-bus": ["libs/message-bus/src/index.ts"],
+      "@angular-communication/component-a": ["libs/component-a/src/index.ts"],
+      "@angular-communication/component-b": ["libs/component-b/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
